@@ -38,7 +38,6 @@ module.exports.run = async (client, message, args) => {
         if (err) console.log(err);
     });
 
-    var channel = message.member.guild.channels.cache.get("logs");
     
     var embed = new discord.MessageEmbed()
         .setColor("#ff0000")
@@ -48,6 +47,8 @@ module.exports.run = async (client, message, args) => {
         **Warning door:** ${message.author}
         **Redenen: ** ${reason}`)
         .addField("Aantal warns", warns[warnUser.id].warns);
+
+     var channel = message.member.guild.channels.cache.get("logs");
 
      if (!channel) return;
 
