@@ -51,17 +51,17 @@ client.on("guildMemberAdd", member => {
 
     if (!channel) return;
 
-    // channel.send(`Welkom bij de server ${member}`);
+    channel.send(`Welkom bij de server ${member}`);
 
-    var joinEmbed = new discord.MessageEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Hoi ${member.user.username}, **Welkom op de server**`)
-        .setThumbnail(member.user.displayAvatarURL)
-        .setColor("#00FF00")
-        .setFooter("Gebruiker gejoined")
-        .setTimestamp();
+    // var joinEmbed = new discord.MessageEmbed()
+    //    .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+    //    .setDescription(`Hoi ${member.user.username}, **Welkom op de server**`)
+    //    .setThumbnail(member.user.displayAvatarURL)
+    //    .setColor("#00FF00")
+    //    .setFooter("Gebruiker gejoined")
+    //    .setTimestamp();
 
-    channel.send(joinEmbed);
+    //channel.send(joinEmbed);
 
 });
 
@@ -86,7 +86,7 @@ client.on("ready", async () => {
 
     console.log(`${client.user.username} is online.`);
 
-    client.user.setActivity("Testing", { type: "PLAYING" });
+    client.user.setActivity("RTD | Rotterdam", { type: "PLAYING" });
 
 });
 
