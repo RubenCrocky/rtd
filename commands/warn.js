@@ -52,7 +52,7 @@ module.exports.run = async (client, message, args) => {
 
      if (!channel) return;
 
-    channel.send(embed);
+     client.channels.cache.find(c => c.name == "logs").send(embed);
 
 
 }
