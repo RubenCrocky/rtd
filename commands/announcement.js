@@ -13,7 +13,9 @@ module.exports.run = async (client, message, args) => {
         var embed = new discord.MessageEmbed()
             .setTitle("Gebruik")
             .setColor("#00ee00")
-            .setDescription(`Maak een announcement door gebruik te maken van: \n !announcement titel ${seperator} bericht ${seperator} kleur ${seperator} kanaal`);
+            .setDescription(`Maak een announcement door gebruik te maken van: \n !announcement titel ${seperator} bericht ${seperator} kleur ${seperator} kanaal`)
+            .addField(`Let erop dat de ${seperator} er altijd bij staat`)
+            .addField("Het kanaal mag je niet taggen, dus ipv #general, moet je gewoon general doen!")
 
         return message.reply(embed);
 
