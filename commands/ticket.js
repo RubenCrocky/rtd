@@ -39,11 +39,6 @@ module.exports.run = async (client, message, args) => {
                         VIEW_CHANNEL: false
                     });
 
-                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@Support team'), {
-                        SEND_MESSAGES: true,
-                        VIEW_CHANNEL: true
-                    });
-
                     settedParent.updateOverwrite(message.author.id, {
                         CREATE_INSTANT_INVITE: false,
                         READ_MESSAGES: true,
@@ -54,6 +49,18 @@ module.exports.run = async (client, message, args) => {
                         VIEW_CHANNEL: true,
                         READ_MESSAGE_HISTORY: true
                     });
+
+                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.id === '758771085302300684'), {
+                        CREATE_INSTANT_INVITE: false,
+                        READ_MESSAGES: true,
+                        SEND_MESSAGES: true,
+                        ATTACH_FILES: true,
+                        CONNECT: true,
+                        ADD_REACTIONS: true,
+                        VIEW_CHANNEL: true,
+                        READ_MESSAGE_HISTORY: true
+                    });
+
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hoi ${message.author.username}`)
